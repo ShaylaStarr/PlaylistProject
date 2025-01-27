@@ -9,13 +9,13 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-        ArrayList <Song> NorPlaylist; 
+       private ArrayList<Song> norPlaylist; 
      /**
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
     public Playlist(){
-        NorPlaylist = new ArrayList<Song>(); 
+        norPlaylist = new ArrayList<Song>(); 
 
     }
 
@@ -40,33 +40,33 @@ public class Playlist {
         Song s2 = new Song(name, artist, min, sec); 
       }
 
-     /*  public Song printSongs(Song NorPlaylist){
-        return NorPlaylist; 
-      }
+     /*  
+      
 
        public Song likeSong(Song NorPlaylist){
         
         if(NorPlaylist.getLiked() == false){
             
             NorPlaylist.toggleLiked(); 
-        } 
-        public displaySong(){
-            for(Song song : NorPlaylist){
-                song.add()
+        } */
+        public Song displaySong(){
+            for(Song song : norPlaylist){
+                System.err.println("song");
 
             }
         }
     }
 
 
+/* 
        } 
 
        public void addSong(ArrayList NorPlaylist){
         NorPlaylist
        
 
-       } */ 
+       }
 
 
 }
-
+*/
