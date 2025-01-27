@@ -7,7 +7,7 @@
  * @version
  */
 import java.util.ArrayList;
-public class PlaylistTester {
+public class PlaylistTester{
     public static void main(String[] args) {
         System.out.println("Initializing a Playlist...\n");
         Playlist p = new Playlist();
@@ -55,4 +55,5 @@ public class PlaylistTester {
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
     } */
+}
 }
