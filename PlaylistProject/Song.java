@@ -1,30 +1,69 @@
 /**
- * File for a Song class to be used in the Playlist Project
- * @author
- * @version
+ * The Song class describes the song in terms of its time in minutes and seconds, its name, and weither it is liked or not
+ * 
+ * @Authors: Shayla Starr and Melanie Zhou
+ * @Date: 1/24/25
  */
-public class Song {
-    //Fields-- what information do we want each Song to store?
 
 
-
+ public class Song {
+    private String name;
+    private int min;
+    private int sec;
+    private boolean liked;
+    private String artist;
 
     /**
-     * Constructor-- what information needs to be given to make a Song?
-     * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
+     * Constructor
      */
-
-
-
-
-
-     /**
-      * Methods-- what will you want each Song to do?
-      * Consider all the getter methods (getName, getArtist, etc.)
-      * You should probably have a toString method to be able to get the information for the full
-      * song easily as well!
-      * What kind of mutator (setter) methods will you need?
-      */
+    public Song(String NAME,String ARTIST, int MIN, int SEC, boolean LIKED)
+    {
+        name = Name;
+        artist= ARTIST;
+        min=MIN;
+        sec = SEC;
+        liked= LIKED;
+    } 
+    public Song(String NAME,String ARTIST, int MIN, int SEC)
+    {
+        name = Name;
+        artist= ARTIST;
+        min=MIN;
+        sec = SEC;
+        liked = false;
+    } 
+    public String getName()
+    {
+        return name;
+    }
+    public String getArtist()
+    {
+        return artist;
+    }
+    public int getMin()
+    {
+        return min;
+    }
+    public int getSec()
+    {
+        return sec;
+    }
+    public boolean getLiked()
+    {
+        return liked;
+    }
+    
+    public void toggleLiked()
+    {
+        if (liked)
+        {
+            liked = false;
+        }
+        else 
+        { 
+            liked = true;
+        }
+    }
 
 
 }
