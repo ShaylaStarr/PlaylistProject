@@ -18,15 +18,16 @@
      */
     public Song(String NAME,String ARTIST, int MIN, int SEC, boolean LIKED)
     {
-        name = Name;
+        name = NAME;
         artist= ARTIST;
         min=MIN;
         sec = SEC;
         liked= LIKED;
     } 
+    
     public Song(String NAME,String ARTIST, int MIN, int SEC)
     {
-        name = Name;
+        name = NAME;
         artist= ARTIST;
         min=MIN;
         sec = SEC;

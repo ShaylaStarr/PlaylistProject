@@ -18,9 +18,6 @@ public class Playlist {
         norPlaylist = new ArrayList<Song>(); 
 
     }
-
-      
-
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
        * Adding a song
@@ -31,27 +28,44 @@ public class Playlist {
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
-      public void addSong(String name, String artist, int min, int sec, boolean liked){
-        Song s1 = new Song (name, artist, min, sec, liked); 
-
-      }
-
-      public void addSong(String name, String artist, int min, int sec){
-        Song s2 = new Song(name, artist, min, sec); 
-      }
-
-     /*  
       
+       public void addSong(String name, String artist, int min, int sec, boolean liked){
+        norPlaylist.add(new Song(name, artist, min, sec, liked)); 
 
-       public Song likeSong(Song NorPlaylist){
+      }
+      
+      public void addSong(String name, String artist, int min, int sec){
+        norPlaylist.add(new Song (name, artist, min, sec)); 
+      }
+
+     
+      /* Like/Unlike Song */
+       public void likeSong(int position){
         
-        if(NorPlaylist.getLiked() == false){
+        if(norPlaylist.get(position).getLiked() == false){
             
-            NorPlaylist.toggleLiked(); 
-        } */
-        public Song displaySong(){
-            for(Song song : norPlaylist){
-                System.err.println("song");
+            norPlaylist.get(position).toggleLiked();
+            System.out.println("Liking song in position " + position);
+        }
+        else
+        {
+          norPlaylist.get(position).toggleLiked();
+            System.out.println("Unliking song in position " + position);
+        }
+      } 
+     
+        /* Display List */
+        public void displaySong(){
+            for(int i = 0; i<norPlaylist.size(); i++){
+                if (norPlaylist.get(i).getLiked() == true) {
+              System.out.println(" '' " + (norPlaylist.get(i).getName())+ " '' "  + " by " +(norPlaylist.get(i).getArtist()) + " " +
+                                    (norPlaylist.get(i).getMin())+ ":" + (norPlaylist.get(i).getSec())+"-- Liked");
+                }
+                else
+                {
+                  System.out.println(" '' " + (norPlaylist.get(i).getName())+ " '' "  + " by " +(norPlaylist.get(i).getArtist()) + " " +
+                                    (norPlaylist.get(i).getMin())+ ":" + (norPlaylist.get(i).getSec()));
+                }
 
             }
         }
@@ -59,10 +73,6 @@ public class Playlist {
 
 
 /* 
-       } 
-
-       public void addSong(ArrayList NorPlaylist){
-        NorPlaylist
        
 
        }

@@ -6,34 +6,39 @@
  * @author
  * @version
  */
-import java.util.ArrayList;
 public class PlaylistTester{
     public static void main(String[] args) {
         System.out.println("Initializing a Playlist...\n");
         Playlist p = new Playlist();
         
         System.out.println("Adding songs to the Playlist...\n");
+       
         /**
          * Add some songs here. Note that the format for adding a Song to a Playlist p
          * is something like...
          * p.addSong(new Song(..., ..., ...))
          */
-        p.addSong(new Song ("World Is Mine", "Hatsune Miku", 4, 13, true));
-        p.addSong(new Song ("Balloon", "Tyler the Creator", 4, 13, true));
-        p.addSong(new Song ("Take Me to the Sun", "D4vd", 4, 13));
-        p.addSong(new Song ("APT", "Rosé & Bruno Mars", 4, 13, true));
 
-       /*  System.out.println("Printing the songs...\n");
+        p.addSong ("World Is Mine", "Hatsune Miku", 4, 13, true);
+        p.addSong ("Balloon", "Tyler the Creator", 4, 13);
+        p.addSong ("Take Me to the Sun", "D4vd", 4, 13);
+        p.addSong ("APT", "Rosé & Bruno Mars", 4, 13);
+
+         System.out.println("Printing the songs...\n");
+
         //Print out all the songs in the playlist to verify it's working correctly
 
+        p.displaySong();
 
-        System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
+        System.out.println("\nLiking the songs in position 2 and 3\n");
         //Once your songs are 'liked', this should be reflected in the next printout
-
+        p.likeSong(2);
+        p.likeSong(3);
 
         System.out.println("Printing the songs...\n");
+        p.displaySong();
 
-
+        /* 
         System.out.println("\nRemoving the song in position A, B, C, etc...\n");
 
 
