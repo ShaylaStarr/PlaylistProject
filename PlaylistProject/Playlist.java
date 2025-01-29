@@ -41,12 +41,18 @@ public class Playlist {
       }
 
       public void purgeSongs(){
-        for(Song song : norPlaylist){
+        for(int song  = norPlaylist.size() -1; song >= 0; song--){
+          if(norPlaylist.get(song).getLiked() == false){
+            norPlaylist.remove(song); 
+          }
+        }
+        
+        /*for(Song song : norPlaylist){     
           if(song.getLiked() == false){
             norPlaylist.remove(song); 
           }
 
-        }
+        }*/ 
 
       }
 /*Removing a song */

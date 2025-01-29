@@ -18,11 +18,15 @@ public class PlaylistTester{
          * is something like...
          * p.addSong(new Song(..., ..., ...))
          */
-
+        p.addSong ("Promise", "Laufey", 3, 54); 
+        p.addSong("New Genesis", "Ado",3, 26 , true); 
         p.addSong ("World Is Mine", "Hatsune Miku", 4, 13, true);
-        p.addSong ("Balloon", "Tyler, the Creator", 4, 13);
-        p.addSong ("Take Me to the Sun", "D4vd", 4, 13);
-        p.addSong ("APT", "Rosé & Bruno Mars", 4, 13);
+        p.addSong ("Balloon", "Tyler, the Creator", 2, 34);
+        p.addSong ("Take Me to the Sun", "D4vd", 2,48);
+        p.addSong ("APT", "Rosé & Bruno Mars", 2, 50);
+        p.addSong("Unlucky", "Gavis Bettel", 4,15, true);
+        p.addSong("30 for 30(with Kendrick Lamar)", "SZA, Kendrick lamar", 4, 38); 
+        
 
          System.out.println("Printing the songs...\n");
 
