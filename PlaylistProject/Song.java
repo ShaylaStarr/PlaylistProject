@@ -16,20 +16,23 @@
     /**
      * Constructor
      */
+    public String toString(){
+        return "Song: '" + name + "' by" + artist + " (" + min + ":" + sec + ") - " + (liked ? "Liked" : "Not Liked");
+
+    }
     public Song(String NAME,String ARTIST, int MIN, int SEC, boolean LIKED)
     {
         name = NAME;
         artist= ARTIST;
-        min=MIN;
+        min= MIN;
         sec = SEC;
         liked= LIKED;
     } 
-    
     public Song(String NAME,String ARTIST, int MIN, int SEC)
     {
         name = NAME;
         artist= ARTIST;
-        min=MIN;
+        min= MIN;
         sec = SEC;
         liked = false;
     } 

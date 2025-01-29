@@ -3,7 +3,7 @@
  * playlist in the main method. You don't need to follow the testing specifications of this exactly
  * if you want to write your own separate tester instead.
  * Note that there's no need for a Scanner in this project-- all of the playlist can be 'hardcoded' into main.
- * @author
+ * @Melanie/Shayla
  * @version
  */
 public class PlaylistTester{
@@ -20,7 +20,7 @@ public class PlaylistTester{
          */
 
         p.addSong ("World Is Mine", "Hatsune Miku", 4, 13, true);
-        p.addSong ("Balloon", "Tyler the Creator", 4, 13);
+        p.addSong ("Balloon", "Tyler, the Creator", 4, 13);
         p.addSong ("Take Me to the Sun", "D4vd", 4, 13);
         p.addSong ("APT", "Rosé & Bruno Mars", 4, 13);
 
@@ -38,27 +38,29 @@ public class PlaylistTester{
         System.out.println("Printing the songs...\n");
         p.displaySong();
 
-        /* 
-        System.out.println("\nRemoving the song in position A, B, C, etc...\n");
-
+        
+        System.out.println("Removing the song in position A, B, C, etc...\n");
+        p.badSong(2); 
 
         System.out.println("Printing the songs...\n");
-
+        p.displaySong(); 
 
         System.out.println("\nPrinting only the liked songs...\n");
         //Your Playlist should be able to do this without looping while in main!
-
+        p.likedSongsPlaylist(); 
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
-
+        p.duration(); 
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-
+        p.purgeSongs();
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
-    } */
+        p.displaySong();
+    } 
+
 }
-}
+

@@ -40,7 +40,7 @@ public class Playlist {
         norPlaylist.add(new Song (name, artist, min, sec)); 
       }
 
-      public void PurgeSongs(){
+      public void purgeSongs(){
         for(Song song : norPlaylist){
           if(song.getLiked() == false){
             norPlaylist.remove(song); 
@@ -50,7 +50,7 @@ public class Playlist {
 
       }
 /*Removing a song */
-public void BadSong(int position){
+public void badSong(int position){
     norPlaylist.remove(position);
       System.out.println("Removing song in position " + position);
   
@@ -58,47 +58,34 @@ public void BadSong(int position){
 
 
 /*sublist of all liked songs */
-     public void LikedSongsPlaylist(){
+     public void likedSongsPlaylist(){
       for(Song song : norPlaylist){
         if(song.getLiked()){
           goodSongs.add(song); 
         }
       }
+
+      for(Song song : goodSongs){
+        System.out.println(song); 
+      }
+      
  }
 
 
 /*duration broisk */
      public void duration(){
       int tot1 = 0; 
-      int tot2 = 0; 
       int total = 0; 
-      if(goodSongs == null){
+     
       for(Song song : norPlaylist){
-        tot1 = song.getMin() * 60  + song.getSec(); 
+        tot1 += song.getMin() * 60  + song.getSec(); 
       }
       int totMin1 = tot1/60; 
     int restSec1 = tot1% 60; 
-    System.out.println("Printing the total duration of all songs :)"); 
     System.out.println(totMin1 + ":" + restSec1);  
      }
-     //_________________________________second sitch 
-     else if(goodSongs != null){
-      for(Song song : goodSongs){
-      tot2 = song.getMin() * 60  + song.getSec(); 
-      }
-      for(Song song : norPlaylist){
-        tot1 = song.getMin() * 60  + song.getSec(); 
-      }
-      total = tot1 + tot2; 
-      int totMin2 = total/60; 
-      int restSec2 = total%60; 
-      System.out.println("Printing the total duration of all songs :)"); 
-      System.out.println(totMin2 + ":" + restSec2); 
-      
-     }
 
-
-     }
+  
 
       /* Like/Unlike Song */
        public void likeSong(int position){
