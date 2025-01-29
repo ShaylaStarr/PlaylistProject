@@ -10,22 +10,24 @@ public class Playlist {
      * (CarDealership, Zoo) for structure on how this will look
      */
        private ArrayList<Song> norPlaylist; 
+       private ArrayList<Song> goodSongs;  
      /**
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
     public Playlist(){
         norPlaylist = new ArrayList<Song>(); 
+        goodSongs = new ArrayList<Song>(); 
 
     }
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
-       * Adding a song
-       * 'liking' a song
-       * Removing a specific song
-       * Examining all Songs (a String return or void print makes sense here)
-       * Examining a sublist of all liked songs
-       * Determining the total duration of all songs
+       * Adding a song :)
+       * 'liking' a song :)
+       * Removing a specific song :)
+       * Examining all Songs (a String return or void print makes sense here) :)
+       * Examining a sublist of all liked songs :)
+       * Determining the total duration of all songs :)
        * Removing all unliked songs from the playlist (careful with this one!)
        */
       
@@ -38,7 +40,66 @@ public class Playlist {
         norPlaylist.add(new Song (name, artist, min, sec)); 
       }
 
-     
+      public void PurgeSongs(){
+        for(Song song : norPlaylist){
+          if(song.getLiked() == false){
+            norPlaylist.remove(song); 
+          }
+
+        }
+
+      }
+/*Removing a song */
+public void BadSong(int position){
+    norPlaylist.remove(position);
+      System.out.println("Removing song in position " + position);
+  
+} 
+
+
+/*sublist of all liked songs */
+     public void LikedSongsPlaylist(){
+      for(Song song : norPlaylist){
+        if(song.getLiked()){
+          goodSongs.add(song); 
+        }
+      }
+ }
+
+
+/*duration broisk */
+     public void duration(){
+      int tot1 = 0; 
+      int tot2 = 0; 
+      int total = 0; 
+      if(goodSongs == null){
+      for(Song song : norPlaylist){
+        tot1 = song.getMin() * 60  + song.getSec(); 
+      }
+      int totMin1 = tot1/60; 
+    int restSec1 = tot1% 60; 
+    System.out.println("Printing the total duration of all songs :)"); 
+    System.out.println(totMin1 + ":" + restSec1);  
+     }
+     //_________________________________second sitch 
+     else if(goodSongs != null){
+      for(Song song : goodSongs){
+      tot2 = song.getMin() * 60  + song.getSec(); 
+      }
+      for(Song song : norPlaylist){
+        tot1 = song.getMin() * 60  + song.getSec(); 
+      }
+      total = tot1 + tot2; 
+      int totMin2 = total/60; 
+      int restSec2 = total%60; 
+      System.out.println("Printing the total duration of all songs :)"); 
+      System.out.println(totMin2 + ":" + restSec2); 
+      
+     }
+
+
+     }
+
       /* Like/Unlike Song */
        public void likeSong(int position){
         
